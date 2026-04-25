@@ -1,0 +1,50 @@
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Build artifacts
+*.o
+*.so
+*.tar.gz
+*.zip
+!skill/voip-engineering-skill.zip
+
+# Captures and logs (no real production data in repo)
+*.pcap
+*.pcapng
+*.log
+!docs/**/*.log.example
+
+# Lab runtime state
+labs/**/data/
+labs/**/logs/
+labs/**/.env
+labs/**/postgres-data/
+labs/**/redis-data/
+
+# Output of voip-doctor.sh runs
+voip-doctor-output/
+**/triage-*/
+**/capture-*/
+**/monitor-*/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Node
+node_modules/
+
+# Local notes (so contributors can keep scratch files without committing)
+NOTES.md
+TODO.local.md
+.scratch/

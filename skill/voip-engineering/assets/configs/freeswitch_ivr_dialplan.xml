@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  freeswitch_ivr_dialplan.xml — Patrón IVR con PRACK interworking
+  Coloca en conf/dialplan/default/01_apolo_ivr.xml
+-->
+<include>
+  <context name="default">
+
+    <!-- IVR 119 entry point -->
+    <extension name="apolo_ivr_119">
+      <condition field="destination_number" expression="^119$">
+        <action application="set" data="hangup_after_bridge=true"/>
+        <action application="set" data="continue_on_fail=true"/>
+        <action application="set" data="ringback=${us-ring}"/>
+
+        <!-- Si el carrier requiere 100rel pero el IVR no, FS B2BUA lo absorbe -->
+        <action application="set" data="sip_require_100rel=true"/>
+        <action application="set" data="sip_send_pranswer=true"/>
+
+        <action application="answer"/>
+        <action application="sleep" data="500"/>
+        <action application="set" data="playback_terminators=#"/>
+        <action application="ivr" data="apolo_main_menu"/>
+        <action application="hangup"/>
+      </condition>
+    </extension>
+
+    <!-- 302 redirect pattern (alternativa al IVR full) -->
+    <extension name="apolo_119_redirect">
+      <condition field="destination_number" expression="^119r$">
+        <action application="redirect" data="sip:ivr-backup@10.0.0.51:5080"/>
+      </condition>
+    </extension>
+
+    <!-- Submenu 1 — Atención al cliente -->
+    <extension name="apolo_119_opt1">
+      <condition field="destination_number" expression="^119001$">
+        <action application="bridge" data="sofia/external/agent_queue@cc.apolo.local"/>
+      </condition>
+    </extension>
+
+  </context>
+</include>
