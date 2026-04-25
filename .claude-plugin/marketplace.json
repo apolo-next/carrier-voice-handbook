@@ -6,37 +6,32 @@
   },
   "metadata": {
     "description": "Open-source carrier-grade voice infrastructure — 20 years of telecom engineering distilled into a Claude Code skill plus companion handbook. Specialized knowledge for Kamailio, FreeSWITCH, RTPEngine, Asterisk, and SBC architectures.",
-    "version": "1.0.0"
+    "version": "1.0.1"
   },
   "plugins": [
     {
       "name": "voip-engineering",
       "source": "./skill/voip-engineering",
-      "description": "Production-tested expertise for open-source carrier-class voice infrastructure: SIP signaling, RTP media, SBCs, IVRs, billing integration, and the operational gotchas that 20 years in telecom networks taught the author. Triggers automatically when working with Kamailio, FreeSWITCH, RTPEngine, Asterisk, or related SIP/RTP topics. Includes the voip-doctor.sh end-to-end diagnostic script.",
-      "version": "1.0.0",
+      "description": "Production-tested expertise for open-source carrier-class voice infrastructure with Kamailio, FreeSWITCH, RTPEngine, and Asterisk. Covers SIP signaling, RTP media, SBC architectures, IVRs, billing integration, and operational diagnostics. Includes voip-doctor.sh for end-to-end troubleshooting and voip-stats-collector.sh for monitoring system integration.",
+      "version": "1.0.1",
+      "author": {
+        "name": "Jesús Bazán",
+        "url": "https://github.com/apolo-next"
+      },
+      "homepage": "https://github.com/apolo-next/carrier-voice-handbook",
+      "license": "Apache-2.0",
       "category": "telecom",
-      "tags": [
+      "keywords": [
         "voip",
         "sip",
-        "rtp",
         "kamailio",
         "freeswitch",
         "rtpengine",
         "asterisk",
         "telecom",
         "sbc",
-        "carrier-class",
-        "ivr",
-        "open-source-telecom",
-        "latam"
+        "carrier-class"
       ],
-      "license": "Apache-2.0",
-      "homepage": "https://github.com/apolo-next/carrier-voice-handbook",
-      "repository": "https://github.com/apolo-next/carrier-voice-handbook",
-      "author": {
-        "name": "Jesús Bazán",
-        "url": "https://github.com/apolo-next"
-      },
       "strict": true
     }
   ]
