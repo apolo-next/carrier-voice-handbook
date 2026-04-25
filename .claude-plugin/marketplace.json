@@ -1,0 +1,43 @@
+{
+  "name": "carrier-voice-handbook",
+  "owner": {
+    "name": "Jesús Bazán",
+    "url": "https://github.com/apolo-next"
+  },
+  "metadata": {
+    "description": "Open-source carrier-grade voice infrastructure — 20 years of telecom engineering distilled into a Claude Code skill plus companion handbook. Specialized knowledge for Kamailio, FreeSWITCH, RTPEngine, Asterisk, and SBC architectures.",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "voip-engineering",
+      "source": "./skill/voip-engineering",
+      "description": "Production-tested expertise for open-source carrier-class voice infrastructure: SIP signaling, RTP media, SBCs, IVRs, billing integration, and the operational gotchas that 20 years in telecom networks taught the author. Triggers automatically when working with Kamailio, FreeSWITCH, RTPEngine, Asterisk, or related SIP/RTP topics. Includes the voip-doctor.sh end-to-end diagnostic script.",
+      "version": "1.0.0",
+      "category": "telecom",
+      "tags": [
+        "voip",
+        "sip",
+        "rtp",
+        "kamailio",
+        "freeswitch",
+        "rtpengine",
+        "asterisk",
+        "telecom",
+        "sbc",
+        "carrier-class",
+        "ivr",
+        "open-source-telecom",
+        "latam"
+      ],
+      "license": "Apache-2.0",
+      "homepage": "https://github.com/apolo-next/carrier-voice-handbook",
+      "repository": "https://github.com/apolo-next/carrier-voice-handbook",
+      "author": {
+        "name": "Jesús Bazán",
+        "url": "https://github.com/apolo-next"
+      },
+      "strict": true
+    }
+  ]
+}

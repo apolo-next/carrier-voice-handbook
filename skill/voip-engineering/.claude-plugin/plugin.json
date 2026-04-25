@@ -1,0 +1,13 @@
+{
+  "name": "voip-engineering",
+  "version": "1.0.0",
+  "description": "Production-tested expertise for open-source carrier-class voice infrastructure with Kamailio, FreeSWITCH, RTPEngine, and Asterisk. Distilled from 20 years in LATAM telecom networks.",
+  "author": {
+    "name": "Jesús Bazán",
+    "url": "https://github.com/apolo-next"
+  },
+  "homepage": "https://github.com/apolo-next/carrier-voice-handbook",
+  "repository": "https://github.com/apolo-next/carrier-voice-handbook",
+  "license": "Apache-2.0",
+  "skills": ["./"]
+}

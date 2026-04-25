@@ -136,20 +136,46 @@ This is the kind of pattern documented throughout `docs/03-architectures/` and `
 
 ## Installing the skill
 
+There are three ways to install the `voip-engineering` skill, in order of recommendation:
+
+### Option 1 — As a Claude Code plugin (recommended)
+
+This is the cleanest path. From within Claude Code:
+
+```
+/plugin marketplace add apolo-next/carrier-voice-handbook
+/plugin install voip-engineering@carrier-voice-handbook
+```
+
+Two commands. Done. Claude Code keeps the skill updated when you run `/plugin marketplace update`.
+
+### Option 2 — Manual copy from the repo
+
+If you prefer not to use the marketplace mechanism:
+
 ```bash
-# Personal installation (your machine)
 git clone https://github.com/apolo-next/carrier-voice-handbook.git
 cp -r carrier-voice-handbook/skill/voip-engineering ~/.claude/skills/
+```
 
-# Verify
+Verify with:
+
+```bash
 claude
 > /skills
 # Should list voip-engineering
 ```
 
-For team installation in a project, place it under `.claude/skills/` of your project repo and commit it.
+### Option 3 — Project-local installation
 
----
+For team installation in a specific project, place it under `.claude/skills/` of your project repo and commit it. Anyone who clones the project gets the same Claude behavior when working on voice-related tasks.
+
+```bash
+mkdir -p .claude/skills/
+cp -r path/to/voip-engineering .claude/skills/
+git add .claude/skills/voip-engineering
+git commit -m "Add voip-engineering skill"
+```
 
 <a id="stack-covered"></a>
 ## Stack covered
