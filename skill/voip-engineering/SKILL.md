@@ -1,6 +1,6 @@
 ---
 name: voip-engineering
-description: Use this skill for any task involving VoIP infrastructure with Kamailio, FreeSWITCH, RTPEngine, Asterisk, or related SIP/RTP components. Triggers include configuring SBCs, debugging SIP signaling (REGISTER, INVITE, 100rel/PRACK, 302 redirects), troubleshooting RTP/media flows, designing dialplans, building IVRs, integrating CGRateS or custom billing engines, analyzing SIP traces (pcap, sngrep, sipgrep), tuning timers (fr_timer, fr_inv_timer), bypass_media configurations, dual-interface RTPEngine setups, FreeSWITCH B2BUA interworking, Asterisk-to-FreeSWITCH migrations, dSIPRouter, concurrent call limiting, air-gapped/containerized VoIP deployments on RHEL/Debian, and modifying or extending the operational diagnostic scripts in scripts/ (notably voip-doctor.sh for end-to-end Kamailio+FS+RTPEngine diagnostics on Apolo SBC and Apolo IVR 119). Do NOT use for general networking questions unrelated to SIP/RTP, or for non-telecom audio processing.
+description: Use this skill for any task involving VoIP infrastructure with Kamailio, FreeSWITCH, RTPEngine, Asterisk, or related SIP/RTP components. Triggers include configuring SBCs, debugging SIP signaling (REGISTER, INVITE, 100rel/PRACK, 302 redirects), troubleshooting RTP/media flows, designing dialplans, building IVRs, integrating CGRateS or custom billing engines, analyzing SIP traces (pcap, sngrep, sipgrep), tuning timers (fr_timer, fr_inv_timer), bypass_media configurations, dual-interface RTPEngine setups, FreeSWITCH B2BUA interworking, Asterisk-to-FreeSWITCH migrations, dSIPRouter, concurrent call limiting, air-gapped/containerized VoIP deployments on RHEL/Debian, observability and monitoring of voice stacks (MOS, jitter, packet loss, RTT, call counters via Prometheus/Loki/Grafana/Telegraf), and modifying or extending the operational scripts in scripts/ (notably voip-doctor.sh for end-to-end diagnostics and voip-stats-collector.sh for JSON metrics export). Do NOT use for general networking questions unrelated to SIP/RTP, or for non-telecom audio processing.
 ---
 
 # VoIP Engineering Skill
@@ -63,10 +63,19 @@ When the user asks to modify, extend, or debug any of these scripts:
 
 Available scripts:
 
-- `scripts/voip-doctor.sh` — **end-to-end diagnostic tool with three modes**: `triage` (60s snapshot), `capture` (pcap + HTML report with embedded SVG ladder diagram), `monitor` (continuous loop with syslog alerts). Auto-detects RHEL 8 vs Debian 12. Bash-only, no external runtime deps beyond `tcpdump`/`tshark` for pcap. Designed for cron, on-call triage, and post-mortem evidence collection. See `scripts/voip-doctor.README.md` for the full deployment guide.
+- `scripts/voip-doctor.sh` — **end-to-end diagnostic tool with three modes**: `triage` (60s snapshot), `capture` (pcap + HTML report with embedded SVG ladder diagram), `monitor` (continuous loop with syslog alerts). Auto-detects RHEL 8 vs Debian 12. Bash-only, no external runtime deps beyond `tcpdump`/`tshark` for pcap. Designed for **on-call triage, post-mortem evidence collection, and human-readable reporting**. See `scripts/voip-doctor.README.md`.
+- `scripts/voip-stats-collector.sh` — **JSON metrics collector** for ingestion into monitoring systems (Loki, Prometheus textfile collector, Telegraf JSON input). Single-shot, idempotent, ~300 lines of bash. Outputs deep RTPEngine metrics (MOS, jitter, packet loss per interface, ng-protocol counters) plus Kamailio dialog/transaction stats and FreeSWITCH per-profile call counters. Designed for **cron-driven observability**, not human reading. See `scripts/voip-stats-collector.README.md` for deployment patterns including Loki/promtail and Prometheus textfile collector configurations.
 - `scripts/sip_trace.sh` — quick sngrep capture wrapper with sensible defaults.
 - `scripts/check_rtpengine.sh` — RTPEngine ng-protocol + kernel module health check.
 - `scripts/fs_health.sh` — FreeSWITCH snapshot via fs_cli (status, channels, registrations, sofia profiles).
+
+**When to recommend which script:**
+
+- User says *"the SBC is dropping calls"*, *"something broke"*, *"I need a postmortem"* → `voip-doctor.sh capture`
+- User says *"set up monitoring"*, *"alert on jitter"*, *"feed Grafana"*, *"how do I track MOS"* → `voip-stats-collector.sh`
+- User wants a quick health check before/after a change → `voip-doctor.sh triage`
+- User wants to watch live for a few minutes during an incident → `voip-doctor.sh monitor`
+- User wants RTP/SIP packet capture for analysis in Wireshark → `sip_trace.sh` then open the pcap, or `voip-doctor.sh capture` for a full report
 
 When the user reports an issue in production ("the SBC is dropping calls", "RTPEngine pool is exhausted"), suggest running `voip-doctor.sh capture` first to gather evidence before recommending config changes. Diagnose from data, not from guesses.
 
