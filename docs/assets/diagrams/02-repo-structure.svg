@@ -1,0 +1,61 @@
+<svg width="100%" viewBox="0 0 680 480" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Repository structure">
+  <!-- Root -->
+  <rect x="240" y="30" width="200" height="56" rx="8" fill="#F1EFE8" stroke="#5F5E5A" stroke-width="0.5"/>
+  <text x="340" y="52" text-anchor="middle" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif" font-size="14" font-weight="500" fill="#2C2C2A">carrier-voice-handbook</text>
+  <text x="340" y="70" text-anchor="middle" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif" font-size="12" fill="#5F5E5A">Repository root</text>
+
+  <!-- Connectors -->
+  <line x1="340" y1="86" x2="340" y2="120" stroke="#888780" stroke-width="1"/>
+  <line x1="100" y1="120" x2="580" y2="120" stroke="#888780" stroke-width="1"/>
+  <line x1="100" y1="120" x2="100" y2="150" stroke="#888780" stroke-width="1"/>
+  <line x1="260" y1="120" x2="260" y2="150" stroke="#888780" stroke-width="1"/>
+  <line x1="420" y1="120" x2="420" y2="150" stroke="#888780" stroke-width="1"/>
+  <line x1="580" y1="120" x2="580" y2="150" stroke="#888780" stroke-width="1"/>
+
+  <!-- docs -->
+  <rect x="40" y="150" width="120" height="56" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
+  <text x="100" y="172" text-anchor="middle" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif" font-size="14" font-weight="500" fill="#042C53">docs/</text>
+  <text x="100" y="190" text-anchor="middle" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif" font-size="12" fill="#185FA5">For humans</text>
+
+  <!-- skill -->
+  <rect x="200" y="150" width="120" height="56" rx="8" fill="#EEEDFE" stroke="#534AB7" stroke-width="0.5"/>
+  <text x="260" y="172" text-anchor="middle" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif" font-size="14" font-weight="500" fill="#26215C">skill/</text>
+  <text x="260" y="190" text-anchor="middle" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif" font-size="12" fill="#534AB7">For Claude Code</text>
+
+  <!-- labs -->
+  <rect x="360" y="150" width="120" height="56" rx="8" fill="#E1F5EE" stroke="#1D9E75" stroke-width="0.5"/>
+  <text x="420" y="172" text-anchor="middle" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif" font-size="14" font-weight="500" fill="#04342C">labs/</text>
+  <text x="420" y="190" text-anchor="middle" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif" font-size="12" fill="#0F6E56">Hands-on practice</text>
+
+  <!-- examples -->
+  <rect x="520" y="150" width="120" height="56" rx="8" fill="#FAEEDA" stroke="#BA7517" stroke-width="0.5"/>
+  <text x="580" y="172" text-anchor="middle" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif" font-size="14" font-weight="500" fill="#412402">examples/</text>
+  <text x="580" y="190" text-anchor="middle" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif" font-size="12" fill="#854F0B">Real configs</text>
+
+  <!-- docs detail -->
+  <text x="50" y="240" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif" font-size="12" fill="#0C447C" font-weight="500">docs/</text>
+  <text x="50" y="258" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif" font-size="12" fill="#185FA5">01-foundations · why open source, SIP model, NOC path</text>
+  <text x="50" y="274" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif" font-size="12" fill="#185FA5">02-components · Kamailio, FS, RTPEngine, Asterisk</text>
+  <text x="50" y="290" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif" font-size="12" fill="#185FA5">03-architectures · SBC, IVR, billing, HA</text>
+  <text x="50" y="306" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif" font-size="12" fill="#185FA5">04-operations · diagnostics, war stories, runbook</text>
+  <text x="50" y="322" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif" font-size="12" fill="#185FA5">05-learning-path · roadmaps and resources</text>
+
+  <!-- skill detail -->
+  <text x="50" y="356" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif" font-size="12" fill="#3C3489" font-weight="500">skill/voip-engineering/</text>
+  <text x="50" y="374" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif" font-size="12" fill="#534AB7">SKILL.md · entry point Claude reads</text>
+  <text x="50" y="390" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif" font-size="12" fill="#534AB7">references/ · technical deep dives</text>
+  <text x="50" y="406" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif" font-size="12" fill="#534AB7">assets/configs/ · battle-tested templates</text>
+  <text x="50" y="422" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif" font-size="12" fill="#534AB7">scripts/ · voip-doctor.sh and helpers</text>
+
+  <!-- labs detail -->
+  <text x="380" y="240" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif" font-size="12" fill="#0F6E56" font-weight="500">labs/</text>
+  <text x="380" y="258" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif" font-size="12" fill="#1D9E75">Reproducible Docker stacks</text>
+  <text x="380" y="274" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif" font-size="12" fill="#1D9E75">Spin up, break, rebuild</text>
+  <text x="380" y="290" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif" font-size="12" fill="#1D9E75">Each with README and exercises</text>
+
+  <!-- examples detail -->
+  <text x="380" y="356" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif" font-size="12" fill="#854F0B" font-weight="500">examples/</text>
+  <text x="380" y="374" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif" font-size="12" fill="#BA7517">Sanitized production configs</text>
+  <text x="380" y="390" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif" font-size="12" fill="#BA7517">Borrowing material, not learning</text>
+  <text x="380" y="406" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif" font-size="12" fill="#BA7517">No real IPs or credentials</text>
+</svg>

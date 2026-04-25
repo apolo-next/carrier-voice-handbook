@@ -1,0 +1,42 @@
+<svg width="100%" viewBox="0 0 680 460" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Asterisk versus FreeSWITCH">
+  <!-- Headers -->
+  <rect x="40" y="30" width="280" height="56" rx="8" fill="#FAECE7" stroke="#993C1D" stroke-width="0.5"/>
+  <text x="180" y="52" text-anchor="middle" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif" font-size="14" font-weight="500" fill="#4A1B0C">Asterisk</text>
+  <text x="180" y="70" text-anchor="middle" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif" font-size="12" fill="#993C1D">PBX heritage, dialplan-driven</text>
+
+  <rect x="360" y="30" width="280" height="56" rx="8" fill="#EEEDFE" stroke="#534AB7" stroke-width="0.5"/>
+  <text x="500" y="52" text-anchor="middle" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif" font-size="14" font-weight="500" fill="#26215C">FreeSWITCH</text>
+  <text x="500" y="70" text-anchor="middle" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif" font-size="12" fill="#534AB7">Softswitch, FSM-driven, scales</text>
+
+  <!-- Asterisk wins -->
+  <text x="40" y="120" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif" font-size="14" font-weight="500" fill="#993C1D">Where Asterisk wins</text>
+
+  <rect x="40" y="135" width="280" height="44" rx="8" fill="#FAECE7" stroke="#993C1D" stroke-width="0.5"/>
+  <text x="180" y="157" text-anchor="middle" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif" font-size="14" fill="#4A1B0C">Corporate PBX</text>
+
+  <rect x="40" y="187" width="280" height="44" rx="8" fill="#FAECE7" stroke="#993C1D" stroke-width="0.5"/>
+  <text x="180" y="209" text-anchor="middle" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif" font-size="14" fill="#4A1B0C">Queues, voicemail, FAX</text>
+
+  <rect x="40" y="239" width="280" height="44" rx="8" fill="#FAECE7" stroke="#993C1D" stroke-width="0.5"/>
+  <text x="180" y="261" text-anchor="middle" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif" font-size="14" fill="#4A1B0C">AGI integrations, legacy stacks</text>
+
+  <!-- FreeSWITCH wins -->
+  <text x="360" y="120" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif" font-size="14" font-weight="500" fill="#3C3489">Where FreeSWITCH wins</text>
+
+  <rect x="360" y="135" width="280" height="44" rx="8" fill="#EEEDFE" stroke="#534AB7" stroke-width="0.5"/>
+  <text x="500" y="157" text-anchor="middle" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif" font-size="14" fill="#26215C">High-density IVRs</text>
+
+  <rect x="360" y="187" width="280" height="44" rx="8" fill="#EEEDFE" stroke="#534AB7" stroke-width="0.5"/>
+  <text x="500" y="209" text-anchor="middle" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif" font-size="14" fill="#26215C">Conferences, transcoding</text>
+
+  <rect x="360" y="239" width="280" height="44" rx="8" fill="#EEEDFE" stroke="#534AB7" stroke-width="0.5"/>
+  <text x="500" y="261" text-anchor="middle" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif" font-size="14" fill="#26215C">B2BUA, PRACK interworking</text>
+
+  <!-- Conclusion box -->
+  <rect x="40" y="320" width="600" height="120" rx="12" fill="#F1EFE8" stroke="#B4B2A9" stroke-width="0.5"/>
+  <text x="60" y="345" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif" font-size="14" font-weight="500" fill="#444441">For carrier-class voice</text>
+  <text x="60" y="370" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif" font-size="12" fill="#5F5E5A">Most modern stacks pair Kamailio (signaling at the edge) with FreeSWITCH</text>
+  <text x="60" y="388" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif" font-size="12" fill="#5F5E5A">(softswitch behind it). Asterisk remains useful when migrating legacy</text>
+  <text x="60" y="406" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif" font-size="12" fill="#5F5E5A">PBXs or for dialplan-heavy enterprise scenarios where FreeSWITCH</text>
+  <text x="60" y="424" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif" font-size="12" fill="#5F5E5A">would be overkill.</text>
+</svg>
